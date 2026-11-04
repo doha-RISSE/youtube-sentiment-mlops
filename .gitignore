@@ -1,0 +1,20 @@
+# Environnement virtuel
+venv/
+.venv/
+
+# Fichiers Python temporaires
+__pycache__/
+*.pyc
+
+# Variables sensibles
+.env
+
+# Données brutes et préparées
+data/raw/
+data/processed/
+
+# Logs
+logs/
+
+# Configuration VS Code
+.vscode/
