@@ -1,9 +1,7 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-joblib
-fastapi
-uvicorn
-pydantic
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.2
+joblib==1.6.0
+scikit-learn==1.9.1
+numpy==2.5.4
+scipy==1.18.1
