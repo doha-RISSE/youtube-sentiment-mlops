@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analysis</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>YouTube Sentiment</h1>
+            <p>Analyse des commentaires par Machine Learning</p>
+        </div>
+
+        <button id="themeButton" class="theme-button" title="Changer le thème">
+            Mode sombre
+        </button>
+    </header>
+
+    <main>
+
+        <section class="analysis-section">
+            <h2>Analyse des commentaires</h2>
+
+            <p id="pageStatus">
+                Ouvre une vidéo YouTube pour commencer.
+            </p>
+
+            <button id="analyzeButton" class="primary-button">
+                Analyser les commentaires
+            </button>
+
+            <p id="loadingStatus" class="status"></p>
+        </section>
+
+        <section class="statistics-section">
+            <h2>Statistiques</h2>
+
+            <p id="totalComments">Commentaires analysés : 0</p>
+
+            <div class="statistics">
+
+                <div class="stat-card negative">
+                    <span>Négatifs</span>
+                    <strong id="negativeCount">0</strong>
+                    <span id="negativePercentage">0 %</span>
+                </div>
+
+                <div class="stat-card neutral">
+                    <span>Neutres</span>
+                    <strong id="neutralCount">0</strong>
+                    <span id="neutralPercentage">0 %</span>
+                </div>
+
+                <div class="stat-card positive">
+                    <span>Positifs</span>
+                    <strong id="positiveCount">0</strong>
+                    <span id="positivePercentage">0 %</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2>Résultats détaillés</h2>
+
+            <div class="results-controls">
+
+                <label for="sentimentFilter">Filtrer :</label>
+
+                <select id="sentimentFilter">
+                    <option value="all">Tous les sentiments</option>
+                    <option value="Negatif">Négatifs</option>
+                    <option value="Neutre">Neutres</option>
+                    <option value="Positif">Positifs</option>
+                </select>
+
+                <button id="copyButton" class="secondary-button">
+                    Copier les résultats
+                </button>
+
+            </div>
+
+            <div id="resultsContainer">
+                <p class="empty-message">
+                    Aucun résultat disponible.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
